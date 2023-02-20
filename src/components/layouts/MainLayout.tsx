@@ -1,5 +1,6 @@
 import Head from "next/head";
 import React from "react";
+import TopBar from "../TopBar";
 
 function MainLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -13,6 +14,7 @@ function MainLayout({ children }: { children: React.ReactNode }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="flex min-h-screen w-full flex-col items-center ">
+        <TopBar />
         {children}
       </main>
     </>
