@@ -1,6 +1,7 @@
 import Head from "next/head";
 import React from "react";
 import TopBar from "../TopBar";
+import SideBar from "../SideBar";
 
 function MainLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -15,6 +16,7 @@ function MainLayout({ children }: { children: React.ReactNode }) {
       </Head>
       <main className="flex min-h-screen w-full flex-col items-center ">
         <TopBar />
+        <SideBar />
         {children}
       </main>
     </>

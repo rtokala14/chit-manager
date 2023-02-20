@@ -1,5 +1,6 @@
 import { signIn, signOut, useSession } from "next-auth/react";
 import Link from "next/link";
+import { Button } from "./ui/button";
 
 function TopBar() {
   const session = useSession();
@@ -9,13 +10,13 @@ function TopBar() {
         Chits Manager
       </Link>
       <div>
-        <button
+        <Button
           onClick={() =>
             session.status === "authenticated" ? signOut() : signIn()
           }
         >
           {session.status === "authenticated" ? "Logout" : "Login"}
-        </button>
+        </Button>
       </div>
     </div>
   );

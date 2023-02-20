@@ -5,7 +5,7 @@ const Home: NextPage = () => {
   const session = useSession();
   return (
     <>
-      <div className=" mt-12">
+      <div className=" mt-14">
         {session.status === "authenticated"
           ? `Hello  ${session.data?.user.name} `
           : "Login to continue"}
