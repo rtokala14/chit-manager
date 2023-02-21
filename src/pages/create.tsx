@@ -8,7 +8,7 @@ async function Create() {
 
   if (session.status === "unauthenticated") {
     await router.push("/");
-    return <></>;
+    return <div></div>;
   }
   return (
     <div className=" flex flex-col items-start pl-2 pt-2">
