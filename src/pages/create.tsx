@@ -7,9 +7,8 @@ function Create() {
   const router = useRouter();
 
   if (session.status === "unauthenticated") {
-    router.push("/").then(() => {
-      return <div></div>;
-    });
+    void router.push("/");
+    return <></>;
   }
   return (
     <div className=" flex flex-col items-start pl-2 pt-2">
