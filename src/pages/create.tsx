@@ -2,13 +2,14 @@ import { useSession } from "next-auth/react";
 import { useRouter } from "next/router";
 import NewChitForm from "~/components/NewChitForm";
 
-async function Create() {
+function Create() {
   const session = useSession();
   const router = useRouter();
 
   if (session.status === "unauthenticated") {
-    await router.push("/");
-    return <div></div>;
+    router.push("/").then(() => {
+      return <div></div>;
+    });
   }
   return (
     <div className=" flex flex-col items-start pl-2 pt-2">
