@@ -1,14 +1,16 @@
+"use client";
+
 import { useEffect, useState } from "react";
 
 export function darkTheme() {
-  const [theme, setTheme] = useState(localStorage.getItem("theme") ?? "dark");
-
-  const handleClick = () => {
-    setTheme(theme === "light" ? "dark" : "light");
-  };
+  const [theme, setTheme] = useState(
+    typeof window !== "undefined"
+      ? localStorage.getItem("theme") ?? "dark"
+      : "dark"
+  );
 
   useEffect(() => {
-    console.log("theme change");
+    // console.log("theme change");
 
     if (theme === "dark") {
       document.documentElement.classList.add("dark");
