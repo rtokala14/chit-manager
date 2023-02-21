@@ -14,10 +14,12 @@ function MainLayout({ children }: { children: React.ReactNode }) {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="flex min-h-screen w-full flex-col items-center bg-slate-100 text-slate-700 dark:bg-slate-900 dark:text-slate-300 ">
+      <main className="z-40 flex min-h-[95vh] w-full flex-col items-start overflow-hidden bg-slate-100 font-serif text-slate-700 dark:bg-slate-900 dark:text-slate-300 ">
         <TopBar />
-        <SideBar />
-        {children}
+        <div className=" flex w-full ">
+          <SideBar />
+          {children}
+        </div>
       </main>
     </>
   );

@@ -1,14 +1,17 @@
 import { type NextPage } from "next";
 import { useSession } from "next-auth/react";
+import Dashboard from "~/components/Dashboard";
 
 const Home: NextPage = () => {
   const session = useSession();
   return (
     <>
-      <div className=" mt-14">
-        {session.status === "authenticated"
-          ? `Hello  ${session.data?.user.name} `
-          : "Login to continue"}
+      <div className="">
+        {session.status === "authenticated" ? (
+          <Dashboard />
+        ) : (
+          "Login to continue"
+        )}
       </div>
     </>
   );

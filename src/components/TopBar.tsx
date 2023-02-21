@@ -6,7 +6,7 @@ import ThemeDropdown from "./themeDropdown";
 function TopBar() {
   const session = useSession();
   return (
-    <div className=" fixed top-0 flex w-full items-center justify-between border-b border-b-slate-400 p-2 px-4 dark:border-b-slate-600">
+    <div className=" sticky top-0 z-50 flex w-full items-center justify-between border-b border-b-slate-400 p-2 px-4 dark:border-b-slate-600">
       <Link href={"/"} className=" text-xl font-medium">
         Chits Manager
       </Link>
