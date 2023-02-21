@@ -6,10 +6,10 @@ import {
   DropdownMenuContent,
   DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
-import { darkTheme } from "~/utils/themer";
+import { DarkTheme } from "~/utils/themer";
 
 const ThemeDropdown = () => {
-  const { theme, setTheme } = darkTheme();
+  const { theme, setTheme } = DarkTheme();
 
   return (
     <div>

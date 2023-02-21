@@ -10,7 +10,7 @@ const Home: NextPage = () => {
         {session.status === "authenticated" ? (
           <Dashboard />
         ) : (
-          "Login to continue"
+          <div className=" min-h-[94vh]">Login to continue</div>
         )}
       </div>
     </>

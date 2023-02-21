@@ -14,6 +14,7 @@ function TopBar() {
         <ThemeDropdown />
         <Button
           variant={session.status === "authenticated" ? "outline" : "default"}
+          // eslint-disable-next-line @typescript-eslint/no-misused-promises
           onClick={() =>
             session.status === "authenticated" ? signOut() : signIn()
           }

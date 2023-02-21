@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-export function darkTheme() {
+export function DarkTheme() {
   const [theme, setTheme] = useState(
     typeof window !== "undefined"
       ? localStorage.getItem("theme") ?? "dark"

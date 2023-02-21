@@ -36,7 +36,8 @@ function NewChitForm() {
             id="payVaried"
             name="payVaried"
             value={"varied"}
-            checked={true}
+            // checked={true}
+            defaultChecked
           />
           <Label htmlFor="payVaried">Variable</Label>
         </div>

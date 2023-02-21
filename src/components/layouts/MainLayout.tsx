@@ -2,8 +2,16 @@ import Head from "next/head";
 import React from "react";
 import TopBar from "../TopBar";
 import SideBar from "../SideBar";
+import { useSession } from "next-auth/react";
 
 function MainLayout({ children }: { children: React.ReactNode }) {
+  const session = useSession();
+
+  if (session.status === "loading") {
+    return (
+      <div className=" h-screen w-screen bg-slate-100 dark:bg-slate-900"></div>
+    );
+  }
   return (
     <>
       <Head>
